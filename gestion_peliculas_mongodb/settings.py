@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # aplicaciones creadas
+    'app_peliculas'
 ]
 
 MIDDLEWARE = [
@@ -75,8 +77,10 @@ WSGI_APPLICATION = 'gestion_peliculas_mongodb.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'djongo',
+        'NAME': 'gestion_peliculas_django_mongodb',
+        'HOST': 'localhost',
+        'PORT': 27017
     }
 }
 
