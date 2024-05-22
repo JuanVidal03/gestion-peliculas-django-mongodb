@@ -17,6 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+# importar las vistas
+from app_peliculas import views
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.incio)
 ]
